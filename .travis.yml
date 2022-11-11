@@ -6,4 +6,4 @@ before_install:
   - docker build -t aparnalahane/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run aparnalahane/docker-react
+  - docker run -e CI=true aparnalahane/docker-react npm run test
